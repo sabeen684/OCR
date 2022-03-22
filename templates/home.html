@@ -1,0 +1,27 @@
+{% extends 'includes/base.html' %}
+{% block content %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-centered">
+        <h1 class="mt-5 mb-3">Welcome to OCR</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 offset-3 border rounded p-3 ">
+        <form enctype="multipart/form-data" action=""  method="post">  
+           {% csrf_token %}
+              <div class="mb-3"><label for="images" class="form-label">Images</label>
+                <input class="form-control" required name="images" type="file" multiple class="form-control-file">
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-outline-primary"  type="submit" href="/">Submit</button> 
+        </div>
+        </form>
+         <hr>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} 

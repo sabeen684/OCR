@@ -1,0 +1,36 @@
+<nav class="navbar container">
+    <div class="logo_header">
+      <a href="#" class="logo">Logo</a>
+      <button class="navbar_toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    
+    <ul class="main_nav">
+      <li>
+        <a href="{%url 'home' %}" class="nav_links">Home</a>
+      </li>
+      <li>
+          <a href="#" class="nav_links">About</a>
+        </li>
+        <li>
+            <a href="#" class="nav_links">Contact</a>
+        </li>
+        {% if not request.user.is_authenticated %}
+            <li>
+                <a href="{% url 'register' %}" class="nav_links">Register</a>
+            </li>
+            <li>
+            <a href="{% url 'login' %}" class="nav_links">Login</a>
+            </li>
+
+        {% else %}
+        <li>
+          <a href="{% url 'logout' %}" class="nav_links">Logout</a>
+        </li>
+        {% endif %}
+    </ul>
+      
+  </nav>
+  

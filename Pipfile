@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+pytesseract = "==0.3.8"
+numpy = "*"
+django-multiupload = "*"
+opencv-python = "==4.5.5.62"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
